@@ -36,7 +36,9 @@
 			<button class="button" (click)="fillBingo(false)">
 				Bingo! rapido
 			</button>
-			<button (click)="generateBingoEmpty()">Limpiar</button>
+			<button (click)="generateBingoEmpty()" [disabled]="makingStuff">
+				Limpiar
+			</button>
 		</div>
 	</div>
 </div>

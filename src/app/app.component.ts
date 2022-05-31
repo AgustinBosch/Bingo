@@ -11,16 +11,19 @@ export class AppComponent implements OnInit {
 	bingo: number[][] = [];
 	delayms: number = 100;
 	title = "bingo";
+	makingStuff: boolean = false;
 
 	ngOnInit() {
 		this.generateBingoEmpty();
 	}
 
 	generateBingoEmpty() {
-		for (let i = 0; i < this.row; i++) {
-			this.bingo[i] = [];
-			for (let j = 0; j < this.col; j++) {
-				this.bingo[i][j] = 0;
+		if (!this.makingStuff) {
+			for (let i = 0; i < this.row; i++) {
+				this.bingo[i] = [];
+				for (let j = 0; j < this.col; j++) {
+					this.bingo[i][j] = 0;
+				}
 			}
 		}
 	}
@@ -38,6 +41,7 @@ export class AppComponent implements OnInit {
 	}
 
 	async fillBingo(delay: boolean) {
+		this.makingStuff = true;
 		for (let i = 0; i < this.row; i++) {
 			for (let j = 0; j < this.col; j++) {
 				while (true) {
@@ -104,6 +108,7 @@ export class AppComponent implements OnInit {
 				}
 			}
 		}
+		this.makingStuff = false;
 	}
 
 	validBlank(row: number, col: number) {
