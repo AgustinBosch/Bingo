@@ -32,8 +32,18 @@
 			>
 				-
 			</button>
-			<button class="button" (click)="fillBingo(true)">Bingo!</button>
-			<button class="button" (click)="fillBingo(false)">
+			<button
+				class="button"
+				(click)="fillBingo(true)"
+				[disabled]="makingStuff"
+			>
+				Bingo!
+			</button>
+			<button
+				class="button"
+				(click)="fillBingo(false)"
+				[disabled]="makingStuff"
+			>
 				Bingo! rapido
 			</button>
 			<button (click)="generateBingoEmpty()" [disabled]="makingStuff">
