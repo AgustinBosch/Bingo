@@ -1,0 +1,46 @@
+.bingo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	min-width: 392px;
+}
+
+.body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.vacio {
+	background-color: #109c2e;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+hr {
+	width: 100%;
+	border: 1px solid black;
+}
+.button {
+	margin: 5px;
+}
+
+.box {
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
+	border-radius: 2px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+}
